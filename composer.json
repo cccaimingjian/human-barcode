@@ -1,0 +1,36 @@
+{
+  "name": "cccaimingjian/human-barcode",
+  "description": "Generate more human-readable barcodes. 生成更便于人类阅读的条码",
+  "keywords": [
+    "barcodes"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "cccaimingjian",
+      "email": "cccaimingjian@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "~7.4|~8.0",
+    "picqer/php-barcode-generator": "^2.2",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "cccaimingjian\\ImageWatermark\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests"
+    }
+  },
+  "require-dev": {
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  }
+}
