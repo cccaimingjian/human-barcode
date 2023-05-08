@@ -1,6 +1,11 @@
 # human-barcode
 Generate more human-readable barcodes. 生成更便于人类阅读的条码。
-THIS PROJECT require picqer/php-barcode-generator
+THIS PROJECT require picqer/php-barcode-generator  
+Just BARCODE
+![just-barcode.png](demo%2Fjust-barcode.png)
+human-readable BARCODE
+![human-barcode.png](demo%2Fhuman-barcode.png)
+
 ### Here is simple USAGE
 ```php
 $human_barcode = new \cccaimingjian\HumanBarcode\HumanBarcode();
