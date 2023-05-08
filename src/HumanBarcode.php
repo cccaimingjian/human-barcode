@@ -29,7 +29,7 @@ class HumanBarcode
         $this->barcode_text = strtoupper($barcode_text);
         $generator = new BarcodeGeneratorPNG();
         $this->barcode_data = $generator->getBarcode($this->barcode_text, $code_type, $this->width_factor, $this->code_height);
-        $this->drawBarcodeText();
+        $this->barcode_data = $this->drawBarcodeText();
         return $this->barcode_data;
     }
 
@@ -52,6 +52,7 @@ class HumanBarcode
         imagepng($image);
         $content = ob_get_contents();
         ob_clean();
+        $this->barcode_data = $content;
         return $content;
     }
 
