@@ -18,7 +18,7 @@
   },
   "autoload": {
     "psr-4": {
-      "cccaimingjian\\ImageWatermark\\": "src"
+      "cccaimingjian\\HumanBarcode\\": "src"
     }
   },
   "autoload-dev": {

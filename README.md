@@ -29,5 +29,5 @@ file_put_contents('PATH',$barcode_image_content);
 <!--blade-->
 <img src="data:image/png;base64,{{$barcode_image_base64}}" height="50" alt="">
 ```
-```
+
 ## For ALL USAGE, Please read picqer/php-barcode-generator's document.

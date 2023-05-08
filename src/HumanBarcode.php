@@ -2,7 +2,6 @@
 
 namespace cccaimingjian\HumanBarcode;
 
-use Picqer\Barcode\BarcodeGenerator;
 use Picqer\Barcode\BarcodeGeneratorPNG;
 
 class HumanBarcode
@@ -34,7 +33,8 @@ class HumanBarcode
         return $this->barcode_data;
     }
 
-    public function drawBarcodeText() {
+    public function drawBarcodeText()
+    {
         $barcode = imagecreatefromstring($this->barcode_data);
         $width = imagesx($barcode);
         $height = imagesy($barcode);
