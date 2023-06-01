@@ -8,10 +8,10 @@ THIS PROJECT require picqer/php-barcode-generator
 ![human-barcode.png](demo%2Fhuman-barcode.png)
 ## Line Left side Detail
 #### with a short vertical lines
-![left.png](demo%2Fleft.png)
+![left.png](demo%2Fleft.png)  
 ## Line Right side Detail
 #### with a short vertical lines
-![right.png](demo%2Fright.png)
+![right.png](demo%2Fright.png)  
 The line in the middle of the barcode and text content is used to confirm whether the barcode is correct after printing. If it is broken, or the vertical lines at both ends are not there, it shows that there is a problem with the printer and the barcode may not be recognized correctly.  
 条码与文字内容中间的线，是用来确认打印后条码是否正确的。如果断了,或者两端的竖线没有，则显示说明打印机有问题，条码不一定能被正确识别。
 
