@@ -24,7 +24,7 @@ class HumanBarcode
      * @param string $code_type Type string defined at Picqer\Barcode\BarcodeGenerator
      * @return string
      */
-    public function createHumanBarcode(string $barcode_text, string $code_type = 'C39'): string
+    public function createHumanBarcode(string $barcode_text, string $code_type = 'C128'): string
     {
         $this->barcode_text = strtoupper($barcode_text);
         $generator = new BarcodeGeneratorPNG();
@@ -40,9 +40,13 @@ class HumanBarcode
         $height = imagesy($barcode);
         $image = imagecreate($width + 30, $height + 50);
         $color = imagecolorAllocate($image, 255, 255, 255);
+        $black = imagecolorAllocate($image, 0, 0, 0);
         imagefill($image, 0, 0, $color);
         imagecopymerge($image, $barcode, 15, 15, 0, 0, $width, $height, 100);
         imagecolorallocate($image, 255, 255, 255);
+        imageline($image, 12, $height + 18, $width + 15, $height + 18, $black);
+        imagefilledellipse($image, 12, $height + 18, 2,3 , $black);
+        imagefilledellipse($image, $width + 15, $height + 18, 2,3 , $black);
         $box = imagettfbbox(18, 0, $this->font_path, $this->barcode_text);
         $x = intval(($width + 30 - $box[2] - $box[0]) / 2);
         imagettftext($image, 18,

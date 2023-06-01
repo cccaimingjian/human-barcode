@@ -19,7 +19,7 @@ $barcode_image_base64 = base64_encode($barcode_image_content);
 $generator = new Picqer\Barcode\BarcodeGeneratorPNG();
 //...
 $barcode_text = 'TYPE-CODE-128';
-$barcode_image_content_WITHOUT_TEXT =  $generator->getBarcode(, $generator::TYPE_CODE_128);
+$barcode_image_content_WITHOUT_TEXT =  $generator->getBarcode($barcode_text, $generator::TYPE_CODE_128);
 $human_barcode = new \cccaimingjian\HumanBarcode\HumanBarcode();
 $human_barcode->setBarcodeData($barcode_image_WITHOUT_TEXT);
 $human_barcode->setBarcodeText($barcode_text);
