@@ -4,7 +4,17 @@ THIS PROJECT require picqer/php-barcode-generator
 ## Just BARCODE  
 ![just-barcode.png](demo%2Fjust-barcode.png)
 ## human-readable BARCODE  
+#### with content text and a Line in the middle of the barcode and text content
 ![human-barcode.png](demo%2Fhuman-barcode.png)
+## Line Left side Detail
+#### with a short vertical lines
+![left.png](demo%2Fleft.png)
+## Line Right side Detail
+#### with a short vertical lines
+![right.png](demo%2Fright.png)
+The line in the middle of the barcode and text content is used to confirm whether the barcode is correct after printing. If it is broken, or the vertical lines at both ends are not there, it shows that there is a problem with the printer and the barcode may not be recognized correctly.  
+条码与文字内容中间的线，是用来确认打印后条码是否正确的。如果断了,或者两端的竖线没有，则显示说明打印机有问题，条码不一定能被正确识别。
+
 
 ### Here is simple USAGE
 ```php
@@ -12,7 +22,6 @@ $human_barcode = new \cccaimingjian\HumanBarcode\HumanBarcode();
 $barcode_image_content = $human_barcode->createHumanBarcode('A-B-C-D-1-2-3456789');
 $barcode_image_base64 = base64_encode($barcode_image_content);
 ```
-
 ### Mix Usage
 ```php
 
