@@ -44,9 +44,9 @@ class HumanBarcode
         imagefill($image, 0, 0, $color);
         imagecopymerge($image, $barcode, 15, 15, 0, 0, $width, $height, 100);
         imagecolorallocate($image, 255, 255, 255);
-        imageline($image, 12, $height + 18, $width + 15, $height + 18, $black);
+        imageline($image, 12, $height + 18, $width + 16, $height + 18, $black);
         imagefilledellipse($image, 12, $height + 18, 2,3 , $black);
-        imagefilledellipse($image, $width + 15, $height + 18, 2,3 , $black);
+        imagefilledellipse($image, $width + 16, $height + 18, 2,3 , $black);
         $box = imagettfbbox(18, 0, $this->font_path, $this->barcode_text);
         $x = intval(($width + 30 - $box[2] - $box[0]) / 2);
         imagettftext($image, 18,
